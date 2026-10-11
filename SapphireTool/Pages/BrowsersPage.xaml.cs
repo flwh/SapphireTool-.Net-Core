@@ -101,13 +101,13 @@ namespace SapphireTool.Pages
                                     await CopyToWithProgressAsync(contentStream, fileStream, response.Content.Headers.ContentLength ?? -1);
                                 }
 
-                                downloadLog += $"\u2022 {app.Title}: Downloaded Successfully!\n\n";
+                                downloadLog += $"\u2022 {app.Title}: 下载成功！\n\n";
                                 downloadCount++;
                             }
                         }
                         catch (Exception ex)
                         {
-                            downloadLog += $"\u2022 {app.Title}: Download Failed - {ex.Message}\n\n";
+                            downloadLog += $"\u2022 {app.Title}：下载失败 - {ex.Message}\n\n";
                         }
                     }
                 }
@@ -116,7 +116,7 @@ namespace SapphireTool.Pages
             DownloadButton.IsEnabled = true;
             sw.Stop();
             ResetUI();
-            await Utils.ShowDialog($"Downloads complete", "The Files are in your Downloads folder");
+            await Utils.ShowDialog("下载完成", "文件已保存在你的下载文件夹中");
         }
 
         private string GetFileExtension(string link)
@@ -146,7 +146,7 @@ namespace SapphireTool.Pages
                 Dispatcher.Invoke(() =>
                 {
                     ProgressBar.Value = totalBytes > 0 ? (totalRead * 100.0 / totalBytes) : 0;
-                    DownloadedLabel.Text = $"{totalRead / 1024 / 1024} MB / {(totalBytes > 0 ? totalBytes / 1024 / 1024 : "Unknown")} MB";
+                    DownloadedLabel.Text = $"{totalRead / 1024 / 1024} MB / {(totalBytes > 0 ? totalBytes / 1024 / 1024 : "未知")} MB";
                     double speed = (totalRead / 1024d) / sw.Elapsed.TotalSeconds;
                     SpeedLabel.Text = string.Format("{0} kb/s", speed.ToString("0.00"));
                 });

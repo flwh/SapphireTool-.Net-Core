@@ -14,7 +14,7 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <ui:TextBlock FontTypography="Title" Text="Context Menu" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" Margin="30" />
+        <ui:TextBlock FontTypography="Title" Text="右键菜单" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" Margin="30" />
 
         <UniformGrid x:Name="containerGrid" Grid.Row="1" Columns="1" Rows="12">
 
@@ -29,10 +29,10 @@
                     <ui:SymbolIcon FontSize="30" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" VerticalAlignment="Center" Margin="0,0,10,0" />
 
                     <StackPanel Grid.Column="1" Margin="5">
-                        <ui:TextBlock FontTypography="BodyStrong" Text="Command Prompt" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                        <ui:TextBlock FontTypography="Caption" Text="Adds the Option To Open CMD as Admin In the Right Click Context Menu" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                        <ui:TextBlock FontTypography="BodyStrong" Text="命令提示符" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="在右键菜单中添加“以管理员身份打开 CMD”选项" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                     </StackPanel>
-                    <ui:ToggleSwitch x:Name="tsCMD" Click="tsCMD_Click" Grid.Column="2" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                    <ui:ToggleSwitch x:Name="tsCMD" Click="tsCMD_Click" Grid.Column="2" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10"/>
                 </Grid>
             </Border>
             <Border Grid.Row="1" Padding="16" Margin="10,0,10,5" Background="{ui:ThemeResource CardBackgroundFillColorDefaultBrush}" BorderBrush="{ui:ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1" Height="80" CornerRadius="8">
@@ -47,9 +47,9 @@
 
                     <StackPanel Grid.Column="1" Margin="5">
                         <ui:TextBlock FontTypography="BodyStrong" Text="PowerShell" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                        <ui:TextBlock FontTypography="Caption" Text="Adds the Option To Open Powershell as Admin In the Right Click Context Menu" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="在右键菜单中添加“以管理员身份打开 PowerShell”选项" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                     </StackPanel>
-                    <ui:ToggleSwitch x:Name="tsPowerShell" Click="tsPowerShell_Click" Grid.Column="2" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                    <ui:ToggleSwitch x:Name="tsPowerShell" Click="tsPowerShell_Click" Grid.Column="2" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10"/>
                 </Grid>
             </Border>
             <Border Grid.Row="1" Padding="16" Margin="10,0,10,5" Background="{ui:ThemeResource CardBackgroundFillColorDefaultBrush}" BorderBrush="{ui:ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1" Height="80" CornerRadius="8">
@@ -63,10 +63,10 @@
                     <ui:SymbolIcon FontSize="30" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" VerticalAlignment="Center" Margin="0,0,10,0" />
 
                     <StackPanel Grid.Column="1" Margin="5">
-                        <ui:TextBlock FontTypography="BodyStrong" Text="Take Ownership" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                        <ui:TextBlock FontTypography="Caption" Text="Adds The Option To Take Ownership Of Files And Folders In the Right Click Context Menu" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                        <ui:TextBlock FontTypography="BodyStrong" Text="获取所有权" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="在右键菜单中添加“获取文件与文件夹所有权”选项" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                     </StackPanel>
-                    <ui:ToggleSwitch x:Name="tsOwner" Click="tsOwner_Click" Grid.Column="2" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                    <ui:ToggleSwitch x:Name="tsOwner" Click="tsOwner_Click" Grid.Column="2" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10"/>
                 </Grid>
             </Border>
             <Border Grid.Row="1" Padding="16" Margin="10,0,10,5" Background="{ui:ThemeResource CardBackgroundFillColorDefaultBrush}" BorderBrush="{ui:ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1" Height="80" CornerRadius="8">
@@ -80,10 +80,10 @@
                     <ui:SymbolIcon FontSize="30" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" VerticalAlignment="Center" Margin="0,0,10,0" />
 
                     <StackPanel Grid.Column="1" Margin="5">
-                        <ui:TextBlock FontTypography="BodyStrong" Text="Control Panel With God Mode" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                        <ui:TextBlock FontTypography="Caption" Text="Adds The Option To Open Control Panel With God Mode To The Context Menu" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                        <ui:TextBlock FontTypography="BodyStrong" Text="上帝模式控制面板" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="在右键菜单中添加“以上帝模式打开控制面板”选项" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                     </StackPanel>
-                    <ui:ToggleSwitch x:Name="tsGodMode" Click="tsGodMode_Click" Grid.Column="2" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                    <ui:ToggleSwitch x:Name="tsGodMode" Click="tsGodMode_Click" Grid.Column="2" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10"/>
                 </Grid>
             </Border>
             <Border Grid.Row="1" Padding="16" Margin="10,0,10,5" Background="{ui:ThemeResource CardBackgroundFillColorDefaultBrush}" BorderBrush="{ui:ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1" Height="80" CornerRadius="8">
@@ -97,10 +97,10 @@
                     <ui:SymbolIcon FontSize="30" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" VerticalAlignment="Center" Margin="0,0,10,0" />
 
                     <StackPanel Grid.Column="1" Margin="5">
-                        <ui:TextBlock FontTypography="BodyStrong" Text="File Hash Check" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                        <ui:TextBlock FontTypography="Caption" Text="Adds the Option To Check The Hash Of a File in The Context Menu" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                        <ui:TextBlock FontTypography="BodyStrong" Text="文件哈希校验" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="在右键菜单中添加“校验文件哈希”选项" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                     </StackPanel>
-                    <ui:ToggleSwitch x:Name="tsSHA256" Click="tsSHA256_Click" Grid.Column="2" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                    <ui:ToggleSwitch x:Name="tsSHA256" Click="tsSHA256_Click" Grid.Column="2" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10"/>
                 </Grid>
             </Border>
             <Border Grid.Row="1" Padding="16" Margin="10,0,10,5" Background="{ui:ThemeResource CardBackgroundFillColorDefaultBrush}" BorderBrush="{ui:ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1" Height="80" CornerRadius="8">
@@ -114,10 +114,10 @@
                     <ui:SymbolIcon FontSize="30" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" VerticalAlignment="Center" Margin="0,0,10,0" />
 
                     <StackPanel Grid.Column="1" Margin="5">
-                        <ui:TextBlock FontTypography="BodyStrong" Text="Kill Not Responding Tasks" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                        <ui:TextBlock FontTypography="Caption" Text="Add The Option To Kill Not Responding Tasks To The Context Menu" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                        <ui:TextBlock FontTypography="BodyStrong" Text="结束未响应任务" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="在右键菜单中添加“结束未响应任务”选项" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                     </StackPanel>
-                    <ui:ToggleSwitch x:Name="tsNotResponding" Click="tsNotResponding_Click" Grid.Column="2" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                    <ui:ToggleSwitch x:Name="tsNotResponding" Click="tsNotResponding_Click" Grid.Column="2" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10"/>
                 </Grid>
             </Border>
             <Border Grid.Row="1" Padding="16" Margin="10,0,10,5" Background="{ui:ThemeResource CardBackgroundFillColorDefaultBrush}" BorderBrush="{ui:ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1" Height="80" CornerRadius="8">
@@ -131,10 +131,10 @@
                     <ui:SymbolIcon FontSize="30" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" VerticalAlignment="Center" Margin="0,0,10,0" />
 
                     <StackPanel Grid.Column="1" Margin="5">
-                        <ui:TextBlock FontTypography="BodyStrong" Text="Windows Tools" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                        <ui:TextBlock FontTypography="Caption" Text="Adds The Option to Open Windows Tools To The Right Click Context Menu" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                        <ui:TextBlock FontTypography="BodyStrong" Text="Windows 工具" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="在右键菜单中添加“打开 Windows 工具”选项" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                     </StackPanel>
-                    <ui:ToggleSwitch x:Name="tsWinTools" Click="tsWinTools_Click" Grid.Column="2" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                    <ui:ToggleSwitch x:Name="tsWinTools" Click="tsWinTools_Click" Grid.Column="2" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10"/>
                 </Grid>
             </Border>
             <Border Grid.Row="1" Padding="16" Margin="10,0,10,5" Background="{ui:ThemeResource CardBackgroundFillColorDefaultBrush}" BorderBrush="{ui:ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1" Height="80" CornerRadius="8">
@@ -148,10 +148,10 @@
                     <ui:SymbolIcon FontSize="30" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" VerticalAlignment="Center" Margin="0,0,10,0" />
 
                     <StackPanel Grid.Column="1" Margin="5">
-                        <ui:TextBlock FontTypography="BodyStrong" Text="Shutdown/Power Options" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                        <ui:TextBlock FontTypography="Caption" Text="Adds The Option To Restart/Shutdown etc. To The Context Menu" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                        <ui:TextBlock FontTypography="BodyStrong" Text="关机/电源选项" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="在右键菜单中添加“重启/关机等”选项" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                     </StackPanel>
-                    <ui:ToggleSwitch x:Name="tsPwrOpt" Click="tsPwrOpt_Click" Grid.Column="2" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                    <ui:ToggleSwitch x:Name="tsPwrOpt" Click="tsPwrOpt_Click" Grid.Column="2" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10"/>
                 </Grid>
             </Border>
             <Border Grid.Row="1" Padding="16" Margin="10,0,10,5" Background="{ui:ThemeResource CardBackgroundFillColorDefaultBrush}" BorderBrush="{ui:ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1" Height="80" CornerRadius="8">
@@ -165,10 +165,10 @@
                     <ui:SymbolIcon FontSize="30" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" VerticalAlignment="Center" Margin="0,0,10,0" />
 
                     <StackPanel Grid.Column="1" Margin="5">
-                        <ui:TextBlock FontTypography="BodyStrong" Text="Import Powerplan" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                        <ui:TextBlock FontTypography="Caption" Text="Adds The Option To Import Powerplans To The Context Menu and Double Click To Import Them" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                        <ui:TextBlock FontTypography="BodyStrong" Text="导入电源计划" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="在右键菜单中添加“导入电源计划”选项，双击 .pow 文件即可直接导入" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                     </StackPanel>
-                    <ui:ToggleSwitch x:Name="tsPwrPln" Click="tsPwrPln_Click" Grid.Column="2" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                    <ui:ToggleSwitch x:Name="tsPwrPln" Click="tsPwrPln_Click" Grid.Column="2" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10"/>
                 </Grid>
             </Border>
             <Border Grid.Row="1" Padding="16" Margin="10,0,10,5" Background="{ui:ThemeResource CardBackgroundFillColorDefaultBrush}" BorderBrush="{ui:ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1" Height="80" CornerRadius="8">
@@ -182,10 +182,10 @@
                     <ui:SymbolIcon FontSize="30" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" VerticalAlignment="Center" Margin="0,0,10,0" />
 
                     <StackPanel Grid.Column="1" Margin="5">
-                        <ui:TextBlock FontTypography="BodyStrong" Text="Run With Priority" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                        <ui:TextBlock FontTypography="Caption" Text="Adds The Option To Run Apps With different Priorities In The Context Menu" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                        <ui:TextBlock FontTypography="BodyStrong" Text="以指定优先级运行" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="在右键菜单中添加“以不同优先级运行程序”选项" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                     </StackPanel>
-                    <ui:ToggleSwitch x:Name="tsPriority" Click="tsPriority_Click" Grid.Column="2" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                    <ui:ToggleSwitch x:Name="tsPriority" Click="tsPriority_Click" Grid.Column="2" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10"/>
                 </Grid>
             </Border>
             <Border Grid.Row="1" Padding="16" Margin="10,0,10,5" Background="{ui:ThemeResource CardBackgroundFillColorDefaultBrush}" BorderBrush="{ui:ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1" Height="80" CornerRadius="8">
@@ -199,10 +199,10 @@
                     <ui:SymbolIcon FontSize="30" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" VerticalAlignment="Center" Margin="0,0,10,0" />
 
                     <StackPanel Grid.Column="1" Margin="5">
-                        <ui:TextBlock FontTypography="BodyStrong" Text="Change Resolution" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                        <ui:TextBlock FontTypography="Caption" Text="Adds The Option To Change Resolution Without The Settings App In The Context Menu" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                        <ui:TextBlock FontTypography="BodyStrong" Text="更改分辨率" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="在右键菜单中添加“无需设置应用即可更改分辨率”选项" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                     </StackPanel>
-                    <ui:ToggleSwitch x:Name="tsRes" Click="tsRes_Click" Grid.Column="2" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                    <ui:ToggleSwitch x:Name="tsRes" Click="tsRes_Click" Grid.Column="2" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10"/>
                 </Grid>
             </Border>
             <Border Grid.Row="1" Padding="16" Margin="10,0,10,5" Background="{ui:ThemeResource CardBackgroundFillColorDefaultBrush}" BorderBrush="{ui:ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1" Height="80" CornerRadius="8">
@@ -216,10 +216,10 @@
                     <ui:SymbolIcon FontSize="30" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" VerticalAlignment="Center" Margin="0,0,10,0" />
 
                     <StackPanel Grid.Column="1" Margin="5">
-                        <ui:TextBlock FontTypography="BodyStrong" Text="Reboot To Bios" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                        <ui:TextBlock FontTypography="Caption" Text="Adds The Option To Reboot To Bios To The Context Menu" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                        <ui:TextBlock FontTypography="BodyStrong" Text="重启进入 BIOS" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="在右键菜单中添加“重启进入 BIOS”选项" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                     </StackPanel>
-                    <ui:ToggleSwitch x:Name="tsBios" Click="tsBios_Click" Grid.Column="2" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                    <ui:ToggleSwitch x:Name="tsBios" Click="tsBios_Click" Grid.Column="2" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10"/>
                 </Grid>
             </Border>
         </UniformGrid>

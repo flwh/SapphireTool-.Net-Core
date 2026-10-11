@@ -40,7 +40,7 @@ public partial class UpdatesPage : Page, IComponentConnector
         {
             txtBlockUltralite.Visibility = Visibility.Visible;
             containerGrid.Visibility = Visibility.Collapsed;
-            Utils.ShowDialog("Sorry", "Updates don't work on Ultralite!");
+            Utils.ShowDialog("抱歉", "更新功能在 UltraLite 版上不可用！");
             btnCheckForUpdates.IsEnabled = false;
         }
     }
@@ -63,7 +63,7 @@ public partial class UpdatesPage : Page, IComponentConnector
         if (GetRegistryValue("Services") == "Default")
             return true;
 
-        Utils.ShowDialog("Configuration Required", "You're not on Default Services. Please change to Default before updating.");
+        Utils.ShowDialog("需要更改配置", "当前不是 Default 服务配置。请先切换到 Default 再更新。");
         return false;
     }
 
@@ -79,20 +79,20 @@ public partial class UpdatesPage : Page, IComponentConnector
             string latestVersionForBuild = availableVersions.FirstOrDefault(v => v.Contains(currentBuild));
             if (latestVersionForBuild == null)
             {
-                await Utils.ShowDialog("You are up to date", "No update available for your current Windows build.");
-                txtBlockLatestWinver.Text = $"Your build ({currentBuild}) is not supported.";
+                await Utils.ShowDialog("已是最新版本", "当前 Windows 内部版本没有可用更新。");
+                txtBlockLatestWinver.Text = $"你的内部版本 ({currentBuild}) 不受支持。";
                 return;
             }
 
             string currentVersion = Utils.GetOSVersion();
             if (Utils.IsNewVersionAvailable(currentVersion, latestVersionForBuild))
             {
-                await Utils.ShowDialog("Update Available!", $"A new version: ({latestVersionForBuild}) is available!");
-                txtBlockLatestWinver.Text = $"Latest Winver: {latestVersionForBuild}";
+                await Utils.ShowDialog("有可用更新！", $"新版本 ({latestVersionForBuild}) 已发布！");
+                txtBlockLatestWinver.Text = $"最新版本：{latestVersionForBuild}";
 
                 if (GetRegistryValue("Edition") == "ULTRALITE")
                 {
-                    await Utils.ShowDialog("Update Available", "Sadly you are on Ultralite meaning you can't update. You have to wait for a new update or install Superlite");
+                    await Utils.ShowDialog("有可用更新", "很遗憾，你使用的是 UltraLite 版，无法更新。请等待新版本发布，或改用 Superlite。");
                     return;
                 }
                 btnCheckForUpdates.Visibility = Visibility.Collapsed;
@@ -101,13 +101,13 @@ public partial class UpdatesPage : Page, IComponentConnector
             }
             else
             {
-                await Utils.ShowDialog("No Update Available!", "You are using the latest version.");
-                txtBlockLatestWinver.Text = "You're up to date!";
+                await Utils.ShowDialog("无可用更新！", "你正在使用最新版本。");
+                txtBlockLatestWinver.Text = "已是最新版本！";
             }
         }
         catch (Exception ex)
         {
-            await Utils.ShowDialog("Error", $"Error checking for updates: {ex.Message}");
+            await Utils.ShowDialog("错误", $"检查更新时出错：{ex.Message}");
         }
     }
     
@@ -124,12 +124,12 @@ public partial class UpdatesPage : Page, IComponentConnector
                 ? "https://hickos.hickdick.workers.dev/0:/Update11.msu"
                 : "https://hickos.hickdick.workers.dev/0:/25H2Update.msu";
 
-            UpdateStatus("Downloading Updates");
+            UpdateStatus("正在下载更新");
             await DownloadFileAsync(new Uri(url), _msuPackage, _cts.Token);
 
             if (!_updateCancelled)
             {
-                UpdateStatus("Installing Updates");
+                UpdateStatus("正在安装更新");
                 progBarDownload.IsIndeterminate = true;
                 txtBlockSpeed.Visibility = Visibility.Collapsed;
                 btnCancel.IsEnabled = false;
@@ -140,7 +140,7 @@ public partial class UpdatesPage : Page, IComponentConnector
         }
         catch (OperationCanceledException)
         {
-            await Utils.ShowDialog("Download Cancelled", "Download has been cancelled!");
+            await Utils.ShowDialog("下载已取消", "下载已被取消！");
             ResetUpdatePage();
         }
         catch (Exception)
@@ -169,7 +169,7 @@ public partial class UpdatesPage : Page, IComponentConnector
             {
                 int progressPercentage = (int)((double)totalBytesRead / totalBytes * 100);
                 txtBlockSpeed.Visibility = Visibility.Visible;
-                txtBlockSpeed.Text = $"Download Speed: {totalBytesRead / 1024 / _stopwatch.Elapsed.TotalSeconds:0.00} kb/s";
+                txtBlockSpeed.Text = $"下载速度：{totalBytesRead / 1024 / _stopwatch.Elapsed.TotalSeconds:0.00} kb/s";
                 progBarDownload.Value = progressPercentage;
             }
         }
@@ -190,12 +190,12 @@ public partial class UpdatesPage : Page, IComponentConnector
         txtBlockSpeed.Text = string.Empty;
         btnCheckForUpdates.Visibility = Visibility.Collapsed;
         txtBlockDownload.Visibility = Visibility.Visible;
-        UpdateStatus("Update Installation Finished, Downloading updated tweaks!");
+        UpdateStatus("更新安装完成，正在下载更新后的优化项！");
     }
 
     private async Task DownloadTweakUpdates()
     {
-        UpdateStatus("Downloading New Tweaks");
+        UpdateStatus("正在下载新的优化项");
         string url = currentBuild.Contains("22631")
     ? "https://raw.githubusercontent.com/HickerDicker/Version/refs/heads/main/23H2.bat"
     : "https://raw.githubusercontent.com/HickerDicker/Version/refs/heads/main/25H2.bat";
@@ -206,8 +206,8 @@ public partial class UpdatesPage : Page, IComponentConnector
         await Utils.DownloadFile("https://raw.githubusercontent.com/HickerDicker/Version/refs/heads/main/run%20regs.bat", $"{Utils.StartupFolder}\\reg.bat");
         Thread.Sleep(1000);
         SetUIState(isDownloading: false);
-        UpdateStatus("Finished Updating restart to apply tweaks");
-        await Utils.ShowDialog("Update Finished", "Please wait for any batch files then Restart Your PC and wait For The Tweaks to Apply");
+        UpdateStatus("更新完成，重启后应用优化");
+        await Utils.ShowDialog("更新完成", "请等待批处理文件执行完毕后重启电脑，重启后优化项即可生效");
     }
     private async Task ApplyTweak(string scriptName, Action additionalAction = null)
     {

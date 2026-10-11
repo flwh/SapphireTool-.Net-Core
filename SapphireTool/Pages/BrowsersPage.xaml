@@ -25,18 +25,18 @@
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
                 <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left">
-                    <ui:Button Name="DownloadButton" Content="Download" Margin="5" Click="DownloadButton_Click" />
-                    <ui:Button Content="Cancel" Margin="5" Click="CancelButton_Click" />
+                    <ui:Button Name="DownloadButton" Content="下载" Margin="5" Click="DownloadButton_Click" />
+                    <ui:Button Content="取消" Margin="5" Click="CancelButton_Click" />
                 </StackPanel>
                 <ProgressBar Name="ProgressBar" Height="20" VerticalAlignment="Center" Margin="177,0,5,0" />
                 <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right">
-                    <ui:TextBlock Text="Speed:" Foreground="#FFFFFFFF" Margin="5,10" />
+                    <ui:TextBlock Text="速度：" Foreground="#FFFFFFFF" Margin="5,10" />
                     <ui:TextBlock Name="SpeedLabel" Text="0 KB/s" Foreground="#FFFFFFFF" Margin="5,10" />
-                    <ui:TextBlock Text="Downloaded:" Foreground="#FFFFFFFF" Margin="5,10" />
+                    <ui:TextBlock Text="已下载：" Foreground="#FFFFFFFF" Margin="5,10" />
                     <ui:TextBlock Name="DownloadedLabel" Text="0 MB" Foreground="#FFFFFFFF" Margin="5,10" />
                 </StackPanel>
             </Grid>
-            <ui:TextBox Name="SearchBox" Height="40" FontSize="16" VerticalContentAlignment="Center" PlaceholderText="Search applications..." TextChanged="SearchBox_TextChanged" />
+            <ui:TextBox Name="SearchBox" Height="40" FontSize="16" VerticalContentAlignment="Center" PlaceholderText="搜索应用..." TextChanged="SearchBox_TextChanged" />
         </StackPanel>
         <ui:ListView Name="AppList" 
                    Grid.Row="1" Margin="10,3,10,10" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectionMode="Single" ItemsSource="{Binding Applications}">

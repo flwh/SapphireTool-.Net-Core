@@ -1,0 +1,45 @@
+name: Build SapphireTool (zh-CN)
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Build (Release)
+        run: dotnet build SapphireTool/SapphireTool.csproj -c Release --nologo
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: SapphireTool-zh-CN-${{ github.run_number }}
+          path: SapphireTool/bin/Release/net8.0-windows/
+
+      - name: Publish Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: zh-build-${{ github.run_number }}
+          name: SapphireTool 汉化构建 run-${{ github.run_number }}
+          body: |
+            自动构建的 SapphireTool 汉化版（zh-CN）。
+
+            - 资产 `SapphireTool.dll` 为主程序汉化版
+            - 替换到 `ssshss\Executables\SapphireTool\` 目录覆盖原文件即可
+            - 替换前请先备份原始 `SapphireTool.dll`
+          files: SapphireTool/bin/Release/net8.0-windows/SapphireTool.dll
+          make_latest: true

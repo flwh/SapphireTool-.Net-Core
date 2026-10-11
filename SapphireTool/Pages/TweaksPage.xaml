@@ -14,7 +14,7 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <ui:TextBlock FontTypography="Title" Text="Tweaks" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" Margin="30" />
+        <ui:TextBlock FontTypography="Title" Text="优化" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" Margin="30" />
 
         <UniformGrid x:Name="containerGrid" Grid.Row="1" Columns="2" Rows="15">
             <Border Padding="16" Margin="10,0,10,5" Background="{ui:ThemeResource CardBackgroundFillColorDefaultBrush}" BorderBrush="{ui:ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1" Height="80" CornerRadius="8">
@@ -24,10 +24,10 @@
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0" Margin="5"> 
-                        <ui:TextBlock FontTypography="BodyStrong" Text="Disable WiFi" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                        <ui:TextBlock FontTypography="Caption" Text="Toggle WiFi On or Off" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                        <ui:TextBlock FontTypography="BodyStrong" Text="禁用 WiFi" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="切换 WiFi 开/关" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                     </StackPanel>
-                    <ui:ToggleSwitch x:Name="tsWiFi" Click="tsWiFi_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                    <ui:ToggleSwitch x:Name="tsWiFi" Click="tsWiFi_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10"/>
                 </Grid>
             </Border>
 
@@ -38,10 +38,10 @@
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0" Margin="5">
-                        <ui:TextBlock FontTypography="BodyStrong" Text="Enable Intel TSX" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                        <ui:TextBlock FontTypography="Caption" Text="Enable Intel Transactional Synchronization Extensions" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                        <ui:TextBlock FontTypography="BodyStrong" Text="启用 Intel TSX" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="启用 Intel 事务同步扩展 (TSX)" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                     </StackPanel>
-                    <ui:ToggleSwitch x:Name="tsIntelTSX" Click="tsIntelTSX_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                    <ui:ToggleSwitch x:Name="tsIntelTSX" Click="tsIntelTSX_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10"/>
                 </Grid>
             </Border>
 
@@ -52,10 +52,10 @@
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0" Margin="5">
-                        <ui:TextBlock FontTypography="BodyStrong" Text="Disable Action Center" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                        <ui:TextBlock FontTypography="Caption" Text="Toggle Action Center On or Off" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                        <ui:TextBlock FontTypography="BodyStrong" Text="禁用操作中心" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="切换操作中心 开/关" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                     </StackPanel>
-                    <ui:ToggleSwitch x:Name="tsActionCenter" Click="tsActionCenter_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                    <ui:ToggleSwitch x:Name="tsActionCenter" Click="tsActionCenter_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10"/>
                 </Grid>
             </Border>
 
@@ -66,10 +66,10 @@
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0" Margin="5">
-                        <ui:TextBlock FontTypography="BodyStrong" Text="Disable DEP/NX" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                        <ui:TextBlock FontTypography="Caption" Text="Toggle Data Execution Prevention" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                        <ui:TextBlock FontTypography="BodyStrong" Text="禁用 DEP/NX" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="切换数据执行保护 (DEP)" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                     </StackPanel>
-                    <ui:ToggleSwitch x:Name="tsDEP" Click="tsDEP_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                    <ui:ToggleSwitch x:Name="tsDEP" Click="tsDEP_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10"/>
                 </Grid>
             </Border>
 
@@ -80,10 +80,10 @@
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0" Margin="5">
-                        <ui:TextBlock FontTypography="BodyStrong" Text="Enable Clipboard" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                        <ui:TextBlock FontTypography="Caption" Text="Toggle Clipboard On or Off" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                        <ui:TextBlock FontTypography="BodyStrong" Text="启用剪贴板" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="切换剪贴板 开/关" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                     </StackPanel>
-                    <ui:ToggleSwitch x:Name="tsClipboard" Click="tsClipboard_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                    <ui:ToggleSwitch x:Name="tsClipboard" Click="tsClipboard_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10"/>
                 </Grid>
             </Border>
 
@@ -94,10 +94,10 @@
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0" Margin="5">
-                        <ui:TextBlock FontTypography="BodyStrong" Text="Disable Bluetooth" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                        <ui:TextBlock FontTypography="Caption" Text="Toggle Bluetooth On or Off" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                        <ui:TextBlock FontTypography="BodyStrong" Text="禁用蓝牙" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="切换蓝牙 开/关" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                     </StackPanel>
-                    <ui:ToggleSwitch x:Name="tsBluetooth" Click="tsBluetooth_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                    <ui:ToggleSwitch x:Name="tsBluetooth" Click="tsBluetooth_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10"/>
                 </Grid>
             </Border>
 
@@ -108,10 +108,10 @@
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0" Margin="5">
-                        <ui:TextBlock FontTypography="BodyStrong" Text="BootMenuPolicy Standard" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                        <ui:TextBlock FontTypography="Caption" Text="Set Boot Menu Policy to Standard" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                        <ui:TextBlock FontTypography="BodyStrong" Text="启动菜单策略 Standard" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="将启动菜单策略设为 Standard" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                     </StackPanel>
-                    <ui:ToggleSwitch x:Name="tsBootMenu" Click="tsBootMenu_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                    <ui:ToggleSwitch x:Name="tsBootMenu" Click="tsBootMenu_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10"/>
                 </Grid>
             </Border>
 
@@ -122,10 +122,10 @@
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0" Margin="5">
-                        <ui:TextBlock FontTypography="BodyStrong" Text="Disable VPN" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                        <ui:TextBlock FontTypography="Caption" Text="Toggle VPN On or Off" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                        <ui:TextBlock FontTypography="BodyStrong" Text="禁用 VPN" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="切换 VPN 开/关" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                     </StackPanel>
-                    <ui:ToggleSwitch x:Name="tsVPN" Click="tsVPN_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                    <ui:ToggleSwitch x:Name="tsVPN" Click="tsVPN_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10"/>
                 </Grid>
             </Border>
 
@@ -136,10 +136,10 @@
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0" Margin="5">
-                        <ui:TextBlock FontTypography="BodyStrong" Text="Disable NTFS Encryption" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                        <ui:TextBlock FontTypography="Caption" Text="Toggle NTFS Encryption On or Off" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                        <ui:TextBlock FontTypography="BodyStrong" Text="禁用 NTFS 加密" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="切换 NTFS 加密 开/关" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                     </StackPanel>
-                    <ui:ToggleSwitch x:Name="tsNTFSEncryption" Click="tsNTFSEncryption_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                    <ui:ToggleSwitch x:Name="tsNTFSEncryption" Click="tsNTFSEncryption_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10"/>
                 </Grid>
             </Border>
 
@@ -150,10 +150,10 @@
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0" Margin="5">
-                        <ui:TextBlock FontTypography="BodyStrong" Text="Disable FSO and Gamebar" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                        <ui:TextBlock FontTypography="Caption" Text="Toggle FSO and Gamebar On or Off" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                        <ui:TextBlock FontTypography="BodyStrong" Text="禁用 FSO 与游戏栏" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="切换 FSO 与游戏栏 开/关" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                     </StackPanel>
-                    <ui:ToggleSwitch x:Name="tsFSOGamebar" Click="tsFSOGamebar_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                    <ui:ToggleSwitch x:Name="tsFSOGamebar" Click="tsFSOGamebar_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10"/>
                 </Grid>
             </Border>
 
@@ -164,10 +164,10 @@
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0" Margin="5">
-                        <ui:TextBlock FontTypography="BodyStrong" Text="Disable Notifications" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                        <ui:TextBlock FontTypography="Caption" Text="Toggle Notifications On or Off" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                        <ui:TextBlock FontTypography="BodyStrong" Text="禁用通知" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="切换通知 开/关" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                     </StackPanel>
-                    <ui:ToggleSwitch x:Name="tsNotifications" Click="tsNotifications_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                    <ui:ToggleSwitch x:Name="tsNotifications" Click="tsNotifications_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10"/>
                 </Grid>
             </Border>
 
@@ -178,10 +178,10 @@
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0" Margin="5">
-                        <ui:TextBlock FontTypography="BodyStrong" Text="Disable Prefetch" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                        <ui:TextBlock FontTypography="Caption" Text="Toggle Prefetch On or Off" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                        <ui:TextBlock FontTypography="BodyStrong" Text="禁用 Prefetch" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="切换 Prefetch 开/关" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                     </StackPanel>
-                    <ui:ToggleSwitch x:Name="tsPrefetch" Click="tsPrefetch_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                    <ui:ToggleSwitch x:Name="tsPrefetch" Click="tsPrefetch_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10"/>
                 </Grid>
             </Border>
 
@@ -193,9 +193,9 @@
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0" Margin="5">
                         <ui:TextBlock FontTypography="BodyStrong" Text="CDROM" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                        <ui:TextBlock FontTypography="Caption" Text="Enable the CDROM service" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="启用 CDROM 服务" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                     </StackPanel>
-                    <ui:ToggleSwitch x:Name="tsCDROM" Click="tsCDROM_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                    <ui:ToggleSwitch x:Name="tsCDROM" Click="tsCDROM_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10"/>
                 </Grid>
             </Border>
             <Border Padding="16" Margin="10,0,10,5" Background="{ui:ThemeResource CardBackgroundFillColorDefaultBrush}" BorderBrush="{ui:ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1" Height="80" CornerRadius="8">
@@ -205,10 +205,10 @@
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0" Margin="5">
-                        <ui:TextBlock FontTypography="BodyStrong" Text="Disable Print Spooler" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                        <ui:TextBlock FontTypography="Caption" Text="Toggle Print Spooler On or Off" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                        <ui:TextBlock FontTypography="BodyStrong" Text="禁用打印后台处理" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="切换打印后台处理 开/关" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                     </StackPanel>
-                    <ui:ToggleSwitch x:Name="tsPrintSpooler" Click="tsPrintSpooler_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                    <ui:ToggleSwitch x:Name="tsPrintSpooler" Click="tsPrintSpooler_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10"/>
                 </Grid>
             </Border>
 
@@ -220,9 +220,9 @@
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0" Margin="5">
                         <ui:TextBlock FontTypography="BodyStrong" Text="NoLazyMode" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                        <ui:TextBlock FontTypography="Caption" Text="Disable MMCSS's lazymode" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="禁用 MMCSS 惰性模式" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                     </StackPanel>
-                    <ui:ToggleSwitch x:Name="tsNoLazyMode" Click="tsNoLazyMode_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                    <ui:ToggleSwitch x:Name="tsNoLazyMode" Click="tsNoLazyMode_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10"/>
                 </Grid>
             </Border>
 
@@ -233,10 +233,10 @@
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0" Margin="5">
-                        <ui:TextBlock FontTypography="BodyStrong" Text="UAC For Admin Account" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                        <ui:TextBlock FontTypography="Caption" Text="Configure UAC for admin accounts" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                        <ui:TextBlock FontTypography="BodyStrong" Text="管理员账户 UAC" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="配置管理员账户的 UAC" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                     </StackPanel>
-                    <ui:ToggleSwitch x:Name="tsUACAdmin" Click="tsUACAdmin_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                    <ui:ToggleSwitch x:Name="tsUACAdmin" Click="tsUACAdmin_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10"/>
                 </Grid>
             </Border>
 
@@ -248,9 +248,9 @@
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0" Margin="5">
                         <ui:TextBlock FontTypography="BodyStrong" Text="VR" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                        <ui:TextBlock FontTypography="Caption" Text="Enable VR Services" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="启用 VR 服务" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                     </StackPanel>
-                    <ui:ToggleSwitch x:Name="tsVR" Click="tsVR_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                    <ui:ToggleSwitch x:Name="tsVR" Click="tsVR_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10"/>
                 </Grid>
             </Border>
 
@@ -261,10 +261,10 @@
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0" Margin="5">
-                        <ui:TextBlock FontTypography="BodyStrong" Text="User Account Control" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                        <ui:TextBlock FontTypography="Caption" Text="Configure User Account Control settings" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                        <ui:TextBlock FontTypography="BodyStrong" Text="用户账户控制 (UAC)" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="配置用户账户控制设置" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                     </StackPanel>
-                    <ui:ToggleSwitch x:Name="tsUAC" Click="tsUAC_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                    <ui:ToggleSwitch x:Name="tsUAC" Click="tsUAC_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10"/>
                 </Grid>
             </Border>
 
@@ -275,10 +275,10 @@
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0" Margin="5">
-                        <ui:TextBlock FontTypography="BodyStrong" Text="Disable Startmenu" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                        <ui:TextBlock FontTypography="Caption" Text="Toggle Start Menu On or Off" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                        <ui:TextBlock FontTypography="BodyStrong" Text="禁用开始菜单" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="切换开始菜单 开/关" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                     </StackPanel>
-                    <ui:ToggleSwitch x:Name="tsStartMenu" Click="tsStartMenu_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                    <ui:ToggleSwitch x:Name="tsStartMenu" Click="tsStartMenu_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10"/>
                 </Grid>
             </Border>
 
@@ -289,10 +289,10 @@
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0" Margin="5">
-                        <ui:TextBlock FontTypography="BodyStrong" Text="Disable Hyper-V" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                        <ui:TextBlock FontTypography="Caption" Text="Toggle Hyper-V On or Off" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                        <ui:TextBlock FontTypography="BodyStrong" Text="禁用 Hyper-V" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="切换 Hyper-V 开/关" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                     </StackPanel>
-                    <ui:ToggleSwitch x:Name="tsHyperV" Click="tsHyperV_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                    <ui:ToggleSwitch x:Name="tsHyperV" Click="tsHyperV_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10"/>
                 </Grid>
             </Border>
 
@@ -303,10 +303,10 @@
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0" Margin="5">
-                        <ui:TextBlock FontTypography="BodyStrong" Text="Enable VBS" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                        <ui:TextBlock FontTypography="Caption" Text="Toggle Virtualization Based Security" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                        <ui:TextBlock FontTypography="BodyStrong" Text="启用 VBS" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="切换基于虚拟化的安全 (VBS)" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                     </StackPanel>
-                    <ui:ToggleSwitch x:Name="tsVBS" Click="tsVBS_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                    <ui:ToggleSwitch x:Name="tsVBS" Click="tsVBS_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10"/>
                 </Grid>
             </Border>
 
@@ -317,10 +317,10 @@
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0" Margin="5">
-                        <ui:TextBlock FontTypography="BodyStrong" Text="Disable Wallpaper Quality Reduction" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                        <ui:TextBlock FontTypography="Caption" Text="Prevent wallpaper quality reduction" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                        <ui:TextBlock FontTypography="BodyStrong" Text="禁用壁纸降质压缩" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="防止壁纸被压缩降质" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                     </StackPanel>
-                    <ui:ToggleSwitch x:Name="tsWallpaperQuality" Click="tsWallpaperQuality_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                    <ui:ToggleSwitch x:Name="tsWallpaperQuality" Click="tsWallpaperQuality_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10"/>
                 </Grid>
             </Border>
 
@@ -331,10 +331,10 @@
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0" Margin="5">
-                        <ui:TextBlock FontTypography="BodyStrong" Text="Disable Multi-Plane-Overlay" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                        <ui:TextBlock FontTypography="Caption" Text="Toggle MPO On or Off" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                        <ui:TextBlock FontTypography="BodyStrong" Text="禁用多平面叠加 (MPO)" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="切换 MPO 开/关" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                     </StackPanel>
-                    <ui:ToggleSwitch x:Name="tsMPO" Click="tsMPO_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                    <ui:ToggleSwitch x:Name="tsMPO" Click="tsMPO_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10"/>
                 </Grid>
             </Border>
 
@@ -345,10 +345,10 @@
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0" Margin="5">
-                        <ui:TextBlock FontTypography="BodyStrong" Text="Transparency Effects" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                        <ui:TextBlock FontTypography="Caption" Text="Toggle transparency effects" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                        <ui:TextBlock FontTypography="BodyStrong" Text="透明效果" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="切换透明效果" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                     </StackPanel>
-                    <ui:ToggleSwitch x:Name="tsTransparency" Click="tsTransparency_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                    <ui:ToggleSwitch x:Name="tsTransparency" Click="tsTransparency_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10"/>
                 </Grid>
             </Border>
 
@@ -359,10 +359,10 @@
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0" Margin="5">
-                        <ui:TextBlock FontTypography="BodyStrong" Text="Disable Lock Screen" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                        <ui:TextBlock FontTypography="Caption" Text="Toggle lock screen On or Off" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                        <ui:TextBlock FontTypography="BodyStrong" Text="禁用锁屏" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="切换锁屏 开/关" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                     </StackPanel>
-                    <ui:ToggleSwitch x:Name="tsLockScreen" Click="tsLockScreen_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                    <ui:ToggleSwitch x:Name="tsLockScreen" Click="tsLockScreen_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10"/>
                 </Grid>
             </Border>
 
@@ -373,10 +373,10 @@
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0" Margin="5">
-                        <ui:TextBlock FontTypography="BodyStrong" Text="Disable Animations" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                        <ui:TextBlock FontTypography="Caption" Text="Toggle system animations" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                        <ui:TextBlock FontTypography="BodyStrong" Text="禁用动画" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="切换系统动画" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                     </StackPanel>
-                    <ui:ToggleSwitch x:Name="tsAnimations" Click="tsAnimations_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                    <ui:ToggleSwitch x:Name="tsAnimations" Click="tsAnimations_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10"/>
                 </Grid>
             </Border>
 
@@ -387,10 +387,10 @@
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0" Margin="5">
-                        <ui:TextBlock FontTypography="BodyStrong" Text="Disable DCOM" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                        <ui:TextBlock FontTypography="Caption" Text="Toggle DCOM On or Off" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                        <ui:TextBlock FontTypography="BodyStrong" Text="禁用 DCOM" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="切换 DCOM 开/关" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                     </StackPanel>
-                    <ui:ToggleSwitch x:Name="tsDCOM" Click="tsDCOM_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                    <ui:ToggleSwitch x:Name="tsDCOM" Click="tsDCOM_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10"/>
                 </Grid>
             </Border>
 
@@ -401,10 +401,10 @@
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0" Margin="5">
-                        <ui:TextBlock FontTypography="BodyStrong" Text="NVME Tweaks" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                        <ui:TextBlock FontTypography="Caption" Text="Apply NVME performance tweaks" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                        <ui:TextBlock FontTypography="BodyStrong" Text="NVME 优化" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="应用 NVME 性能优化" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                     </StackPanel>
-                    <ui:ToggleSwitch x:Name="tsNVMETweaks" Click="tsNVMETweaks_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                    <ui:ToggleSwitch x:Name="tsNVMETweaks" Click="tsNVMETweaks_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10"/>
                 </Grid>
             </Border>
 
@@ -416,9 +416,9 @@
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0" Margin="5">
                         <ui:TextBlock FontTypography="BodyStrong" Text="LargeSystemCache" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                        <ui:TextBlock FontTypography="Caption" Text="Configure large system cache" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="配置大容量系统缓存" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                     </StackPanel>
-                    <ui:ToggleSwitch x:Name="tsLargeSystemCache" Click="tsLargeSystemCache_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                    <ui:ToggleSwitch x:Name="tsLargeSystemCache" Click="tsLargeSystemCache_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10"/>
                 </Grid>
             </Border>
 
@@ -429,10 +429,10 @@
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0" Margin="5">
-                        <ui:TextBlock FontTypography="BodyStrong" Text="System Profile Tweaks" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                        <ui:TextBlock FontTypography="Caption" Text="Apply system profile tweaks" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                        <ui:TextBlock FontTypography="BodyStrong" Text="系统配置文件优化" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="应用系统配置文件优化" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                     </StackPanel>
-                    <ui:ToggleSwitch x:Name="tsSystemProfile" Click="tsSystemProfile_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                    <ui:ToggleSwitch x:Name="tsSystemProfile" Click="tsSystemProfile_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10"/>
                 </Grid>
             </Border>
         </UniformGrid>

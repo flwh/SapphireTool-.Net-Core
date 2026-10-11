@@ -10,11 +10,11 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <ui:TextBlock FontTypography="Title" Text="Gaming Tweaks" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" Margin="30,20,30,10" />
+        <ui:TextBlock FontTypography="Title" Text="游戏优化" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" Margin="30,20,30,10" />
         <StackPanel Grid.Row="1" Margin="30,0,30,20">
             <ui:CardExpander Margin="0,0,0,10" IsExpanded="True">
                 <ui:CardExpander.Header>
-                    <ui:TextBlock FontTypography="Title" Text="Recommended" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                    <ui:TextBlock FontTypography="Title" Text="推荐" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
                 </ui:CardExpander.Header>
 
                 <StackPanel>
@@ -25,10 +25,10 @@
                                 <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
                             <StackPanel Grid.Column="0" Margin="0">
-                                <ui:TextBlock FontTypography="BodyStrong" Text="Disable Preemption (NVIDIA)" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                                <ui:TextBlock FontTypography="Caption" Text="Toggle preemption On or Off" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                                <ui:TextBlock FontTypography="BodyStrong" Text="禁用抢占 (NVIDIA)" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                                <ui:TextBlock FontTypography="Caption" Text="切换显卡抢占 开/关" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                             </StackPanel>
-                            <ui:ToggleSwitch x:Name="tsPreemption" Click="tsPreemption_Click" Grid.Column="1" VerticalAlignment="Center" OffContent="Disabled" OnContent="Enabled" Margin="0"/>
+                            <ui:ToggleSwitch x:Name="tsPreemption" Click="tsPreemption_Click" Grid.Column="1" VerticalAlignment="Center" OffContent="关" OnContent="开" Margin="0"/>
                         </Grid>
                     </Border>
 
@@ -39,10 +39,10 @@
                                 <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
                             <StackPanel Grid.Column="0" Margin="0">
-                                <ui:TextBlock FontTypography="BodyStrong" Text="Disable HDCP" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                                <ui:TextBlock FontTypography="Caption" Text="Toggle HDCP On or Off" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                                <ui:TextBlock FontTypography="BodyStrong" Text="禁用 HDCP" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                                <ui:TextBlock FontTypography="Caption" Text="切换 HDCP 开/关" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                             </StackPanel>
-                            <ui:ToggleSwitch x:Name="tsHDCP" Click="tsHDCP_Click" Grid.Column="1" VerticalAlignment="Center" OffContent="Disabled" OnContent="Enabled" Margin="0"/>
+                            <ui:ToggleSwitch x:Name="tsHDCP" Click="tsHDCP_Click" Grid.Column="1" VerticalAlignment="Center" OffContent="关" OnContent="开" Margin="0"/>
                         </Grid>
                     </Border>
 
@@ -53,10 +53,10 @@
                                 <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
                             <StackPanel Grid.Column="0" Margin="0">
-                                <ui:TextBlock FontTypography="BodyStrong" Text="Network Optimization" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                                <ui:TextBlock FontTypography="Caption" Text="Optimize network settings" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                                <ui:TextBlock FontTypography="BodyStrong" Text="网络优化" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                                <ui:TextBlock FontTypography="Caption" Text="优化网络设置" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                             </StackPanel>
-                            <ui:ToggleSwitch x:Name="tsNetworkOptimization" Click="tsNetworkOptimization_Click" Grid.Column="1" VerticalAlignment="Center" OffContent="Disabled" OnContent="Enabled" Margin="0"/>
+                            <ui:ToggleSwitch x:Name="tsNetworkOptimization" Click="tsNetworkOptimization_Click" Grid.Column="1" VerticalAlignment="Center" OffContent="关" OnContent="开" Margin="0"/>
                         </Grid>
                     </Border>
                     <Border Padding="12" Margin="0,0,0,10" Background="{ui:ThemeResource CardBackgroundFillColorDefaultBrush}" BorderBrush="{ui:ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1" CornerRadius="8">
@@ -66,8 +66,8 @@
                                 <RowDefinition Height="Auto" />
                             </Grid.RowDefinitions>
                             <StackPanel Grid.Row="0" Margin="0,0,0,8">
-                                <ui:TextBlock FontTypography="BodyStrong" Text="Services" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                                <ui:TextBlock FontTypography="Caption" Text="Select service configuration" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                                <ui:TextBlock FontTypography="BodyStrong" Text="服务" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                                <ui:TextBlock FontTypography="Caption" Text="选择服务配置方案" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                             </StackPanel>
                             <ComboBox x:Name="cbServices" Grid.Row="1" SelectionChanged="cbServices_SelectionChanged" HorizontalAlignment="Stretch" Height="40">
                                 <ComboBoxItem Content="Default" />
@@ -80,7 +80,7 @@
             </ui:CardExpander>
             <ui:CardExpander Margin="0,0,0,10" IsExpanded="True">
                 <ui:CardExpander.Header>
-                    <ui:TextBlock FontTypography="Title" Text="Miscellaneous" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                    <ui:TextBlock FontTypography="Title" Text="杂项" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
                 </ui:CardExpander.Header>
 
                 <StackPanel>
@@ -92,7 +92,7 @@
                             </Grid.RowDefinitions>
                             <StackPanel Grid.Row="0" Margin="0,0,0,8">
                                 <ui:TextBlock FontTypography="BodyStrong" Text="SvcHostSplitThreshold" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                                <ui:TextBlock FontTypography="Caption" Text="Set SvcHost split threshold" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                                <ui:TextBlock FontTypography="Caption" Text="设置 SvcHost 拆分阈值" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                             </StackPanel>
                             <ComboBox x:Name="cbSvcHostSplit" Grid.Row="1" SelectionChanged="cbSvcHostSplit_SelectionChanged" HorizontalAlignment="Stretch" Height="40">
                                 <ComboBoxItem Content="4GB RAM" />
@@ -115,9 +115,9 @@
                                 <RowDefinition Height="Auto" />
                             </Grid.RowDefinitions>
                             <StackPanel Grid.Row="0" Margin="0,0,0,8">
-                                <ui:TextBlock FontTypography="BodyStrong" Text="Win32 Priority Separation" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                                <ui:TextBlock FontTypography="Caption" Text="Set Win32 priority separation (Hex)" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
-                                <ui:TextBlock FontTypography="Caption" Text="(SapphireOS default is 2A)" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                                <ui:TextBlock FontTypography="BodyStrong" Text="Win32 优先级分离" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                                <ui:TextBlock FontTypography="Caption" Text="设置 Win32 优先级分离（十六进制）" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                                <ui:TextBlock FontTypography="Caption" Text="（SapphireOS 默认值为 2A）" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                             </StackPanel>
                             <ComboBox x:Name="cbWin32Priority" Grid.Row="1" SelectionChanged="cbWin32Priority_SelectionChanged" HorizontalAlignment="Stretch" Height="40">
                                 <ComboBoxItem Content="1A (Hex)" />
@@ -156,11 +156,11 @@
 
                     <ui:Button x:Name="btnNIP" Click="btnNIP_Click" Content="NIP" Grid.Column="0" Grid.Row="0" Margin="5" HorizontalAlignment="Stretch"/>
                     <ui:Button x:Name="btnPState0" Click="btnPState0_Click" Content="P-State 0" Grid.Column="1" Grid.Row="0" Margin="5" HorizontalAlignment="Stretch"/>
-                    <ui:Button x:Name="btnDisableECC" Click="btnDisableECC_Click" Content="Disable ECC" Grid.Column="2" Grid.Row="0" Margin="5" HorizontalAlignment="Stretch"/>
-                    <ui:Button x:Name="btnDisableTelemetry" Click="btnDisableTelemetry_Click" Content="Disable Telemetry" Grid.Column="0" Grid.Row="1" Margin="5" HorizontalAlignment="Stretch"/>
-                    <ui:Button x:Name="btnUnrestrictClockPolicy" Click="btnUnrestrictClockPolicy_Click" Content="Unrestrict Clock Policy" Grid.Column="1" Grid.Row="1" Margin="5" HorizontalAlignment="Stretch"/>
+                    <ui:Button x:Name="btnDisableECC" Click="btnDisableECC_Click" Content="禁用 ECC" Grid.Column="2" Grid.Row="0" Margin="5" HorizontalAlignment="Stretch"/>
+                    <ui:Button x:Name="btnDisableTelemetry" Click="btnDisableTelemetry_Click" Content="禁用遥测" Grid.Column="0" Grid.Row="1" Margin="5" HorizontalAlignment="Stretch"/>
+                    <ui:Button x:Name="btnUnrestrictClockPolicy" Click="btnUnrestrictClockPolicy_Click" Content="解除频率策略限制" Grid.Column="1" Grid.Row="1" Margin="5" HorizontalAlignment="Stretch"/>
                     <ui:Button x:Name="btnNVCleanstall" Click="btnNVCleanstall_Click" Content="NVCleanstall" Grid.Column="2" Grid.Row="1" Margin="5" HorizontalAlignment="Stretch"/>
-                    <ui:Button x:Name="btnMiscellaneous" Click="btnMiscellaneous_Click" Content="Miscellaneous" Grid.Column="0" Grid.Row="2" Margin="5" HorizontalAlignment="Stretch"/>
+                    <ui:Button x:Name="btnMiscellaneous" Click="btnMiscellaneous_Click" Content="杂项" Grid.Column="0" Grid.Row="2" Margin="5" HorizontalAlignment="Stretch"/>
                 </Grid>
             </ui:CardExpander>
             <ui:CardExpander Margin="0,0,0,10" IsExpanded="True">
@@ -182,15 +182,15 @@
 
                     <ui:Button x:Name="btnDwords" Click="btnDwords_Click" Content="DWORDS" Grid.Column="0" Grid.Row="0" Margin="5" HorizontalAlignment="Stretch"/>
                     <ui:Button x:Name="btnRSS" Click="btnRSS_Click" Content="RSS" Grid.Column="1" Grid.Row="0" Margin="5" HorizontalAlignment="Stretch"/>
-                    <ui:Button x:Name="btnDriverDownload" Click="btnDriverDownload_Click" Content="Driver Download" Grid.Column="2" Grid.Row="0" Margin="5" HorizontalAlignment="Stretch"/>
-                    <ui:Button x:Name="btnDisableDXNAVI" Click="btnDisableDXNAVI_Click" Content="Disable DXNAVI" Grid.Column="0" Grid.Row="1" Margin="5" HorizontalAlignment="Stretch"/>
-                    <ui:Button x:Name="btnShaderCacheOn" Click="btnShaderCacheOn_Click" Content="Shader Cache AlwaysON" Grid.Column="1" Grid.Row="1" Margin="5" HorizontalAlignment="Stretch"/>
-                    <ui:Button x:Name="btnShaderCacheDefault" Click="btnShaderCacheDefault_Click" Content="Shader Cache Default" Grid.Column="2" Grid.Row="1" Margin="5" HorizontalAlignment="Stretch"/>
+                    <ui:Button x:Name="btnDriverDownload" Click="btnDriverDownload_Click" Content="驱动下载" Grid.Column="2" Grid.Row="0" Margin="5" HorizontalAlignment="Stretch"/>
+                    <ui:Button x:Name="btnDisableDXNAVI" Click="btnDisableDXNAVI_Click" Content="禁用 DXNAVI" Grid.Column="0" Grid.Row="1" Margin="5" HorizontalAlignment="Stretch"/>
+                    <ui:Button x:Name="btnShaderCacheOn" Click="btnShaderCacheOn_Click" Content="着色器缓存 常开" Grid.Column="1" Grid.Row="1" Margin="5" HorizontalAlignment="Stretch"/>
+                    <ui:Button x:Name="btnShaderCacheDefault" Click="btnShaderCacheDefault_Click" Content="着色器缓存 恢复默认" Grid.Column="2" Grid.Row="1" Margin="5" HorizontalAlignment="Stretch"/>
                 </Grid>
             </ui:CardExpander>
             <ui:CardExpander Margin="0,0,0,10" IsExpanded="True">
                 <ui:CardExpander.Header>
-                    <ui:TextBlock FontTypography="Title" Text="Useful Tools" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                    <ui:TextBlock FontTypography="Title" Text="实用工具" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
                 </ui:CardExpander.Header>
 
                 <Grid>

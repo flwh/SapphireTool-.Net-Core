@@ -25,40 +25,40 @@
             </Grid.RowDefinitions>
             <ui:NavigationView x:Name="RootNavigation" IsBackButtonVisible="Collapsed" Grid.Row="1" OpenPaneLength="230">
                 <ui:NavigationView.MenuItems>
-                    <ui:NavigationViewItem x:Name="dashboardNavBtn" Content="Dashboard" TargetPageType="{x:Type pages:Page1}" Click="dashboardNavBtn_Click">
+                    <ui:NavigationViewItem x:Name="dashboardNavBtn" Content="仪表盘" TargetPageType="{x:Type pages:Page1}" Click="dashboardNavBtn_Click">
                         <ui:NavigationViewItem.Icon>
                             <ui:SymbolIcon Symbol="Home24" />
                         </ui:NavigationViewItem.Icon>
                     </ui:NavigationViewItem>
-                    <ui:NavigationViewItem x:Name="componentsNavBtn" Content="Tweaks" NavigationCacheMode="Enabled" TargetPageType="{x:Type pages:TweaksPage}" Click="componentsNavBtn_Click">
+                    <ui:NavigationViewItem x:Name="componentsNavBtn" Content="优化" NavigationCacheMode="Enabled" TargetPageType="{x:Type pages:TweaksPage}" Click="componentsNavBtn_Click">
                         <ui:NavigationViewItem.Icon>
                             <ui:SymbolIcon Symbol="Apps24" />
                         </ui:NavigationViewItem.Icon>
                     </ui:NavigationViewItem>
 
-                    <ui:NavigationViewItem x:Name="browsersNavBtn" Content="Downloads" NavigationCacheMode="Enabled" TargetPageType="{x:Type pages:BrowsersPage}" Click="browsersNavBtn_Click">
+                    <ui:NavigationViewItem x:Name="browsersNavBtn" Content="下载" NavigationCacheMode="Enabled" TargetPageType="{x:Type pages:BrowsersPage}" Click="browsersNavBtn_Click">
                         <ui:NavigationViewItem.Icon>
                             <ui:SymbolIcon Symbol="WebAsset24" />
                         </ui:NavigationViewItem.Icon>
                     </ui:NavigationViewItem>
 
-                    <ui:NavigationViewItem x:Name="driversNavBtn" Content="Gaming Tweaks" NavigationCacheMode="Enabled" TargetPageType="{x:Type pages:GamingTweaksPage}" Click="driversNavBtn_Click">
+                    <ui:NavigationViewItem x:Name="driversNavBtn" Content="游戏优化" NavigationCacheMode="Enabled" TargetPageType="{x:Type pages:GamingTweaksPage}" Click="driversNavBtn_Click">
                         <ui:NavigationViewItem.Icon>
                             <ui:SymbolIcon Symbol="WindowWrench24" />
                         </ui:NavigationViewItem.Icon>
                     </ui:NavigationViewItem>
 
-                    <ui:NavigationViewItem Name="updatesNavBtn" Content="Updates" NavigationCacheMode="Enabled" TargetPageType="{x:Type pages:UpdatesPage}" Click="updatesNavBtn_Click">
+                    <ui:NavigationViewItem Name="updatesNavBtn" Content="更新" NavigationCacheMode="Enabled" TargetPageType="{x:Type pages:UpdatesPage}" Click="updatesNavBtn_Click">
                         <ui:NavigationViewItem.Icon>
                             <ui:SymbolIcon Symbol="DualScreenUpdate24" />
                         </ui:NavigationViewItem.Icon>
                     </ui:NavigationViewItem>
-                    <ui:NavigationViewItem Name="ctxMenuBtn" Content="Context Menu" NavigationCacheMode="Enabled" TargetPageType="{x:Type pages:ContextMenuPage}" Click="ctxMenuBtn_Click">
+                    <ui:NavigationViewItem Name="ctxMenuBtn" Content="右键菜单" NavigationCacheMode="Enabled" TargetPageType="{x:Type pages:ContextMenuPage}" Click="ctxMenuBtn_Click">
                         <ui:NavigationViewItem.Icon>
                             <ui:SymbolIcon Symbol="ApprovalsApp24" />
                         </ui:NavigationViewItem.Icon>
                     </ui:NavigationViewItem>
-                    <ui:NavigationViewItem Name="PremiumBtn" Content="Premium" NavigationCacheMode="Enabled" Click="PremiumBtn_Click">
+                    <ui:NavigationViewItem Name="PremiumBtn" Content="高级版" NavigationCacheMode="Enabled" Click="PremiumBtn_Click">
                         <ui:NavigationViewItem.Icon>
                             <ui:SymbolIcon Symbol="Crown20" />
                         </ui:NavigationViewItem.Icon>
@@ -66,7 +66,7 @@
                 </ui:NavigationView.MenuItems>
 
                 <ui:NavigationView.FooterMenuItems>
-                    <ui:NavigationViewItem x:Name="aboutNavBtn" Content="About" NavigationCacheMode="Enabled" TargetPageType="{x:Type pages:AboutPage}" Click="aboutNavBtn_Click">
+                    <ui:NavigationViewItem x:Name="aboutNavBtn" Content="关于" NavigationCacheMode="Enabled" TargetPageType="{x:Type pages:AboutPage}" Click="aboutNavBtn_Click">
                         <ui:NavigationViewItem.Icon>
                             <ui:SymbolIcon Symbol="Info24" />
                         </ui:NavigationViewItem.Icon>
@@ -94,8 +94,8 @@
                                 <Grid>
                                     <StackPanel Margin="48,0" HorizontalAlignment="Left" VerticalAlignment="Center">
                                         <ui:TextBlock FontTypography="Title" Foreground="#FFFFFF" Text="SapphireTool" />
-                                        <ui:TextBlock FontTypography="Subtitle" Foreground="#B7FFFFFF" Text="A Simple POST Install Tool" />
-                                        <ui:TextBlock FontTypography="BodyStrong" Foreground="#B7FFFFFF" Text="Download daily use apps and configure windows with ease." />
+                                        <ui:TextBlock FontTypography="Subtitle" Foreground="#B7FFFFFF" Text="简洁的 POST 安装工具" />
+                                        <ui:TextBlock FontTypography="BodyStrong" Foreground="#B7FFFFFF" Text="轻松下载常用应用，随心配置 Windows。" />
                                     </StackPanel>
                                 </Grid>
                             </Border>
@@ -121,8 +121,8 @@
                                     <Image Width="60" Margin="24,0,0,0" Source="pack://application:,,,/Assets/Apps.png" RenderOptions.BitmapScalingMode="HighQuality" />
 
                                     <StackPanel Grid.Column="1" Margin="24" VerticalAlignment="Center">
-                                        <ui:TextBlock Margin="0" FontTypography="BodyStrong" Text="Tweaks" TextWrapping="WrapWithOverflow" />
-                                        <ui:TextBlock Appearance="Secondary" Foreground="{DynamicResource TextFillColorSecondaryBrush}" Text="Toggle on/off system settings." TextWrapping="WrapWithOverflow" />
+                                        <ui:TextBlock Margin="0" FontTypography="BodyStrong" Text="优化" TextWrapping="WrapWithOverflow" />
+                                        <ui:TextBlock Appearance="Secondary" Foreground="{DynamicResource TextFillColorSecondaryBrush}" Text="开关各类系统设置。" TextWrapping="WrapWithOverflow" />
                                     </StackPanel>
                                 </Grid>
                             </ui:CardAction>
@@ -137,8 +137,8 @@
                                     <Image Width="60" Margin="24,0,0,0" Source="pack://application:,,,/Assets/MenuBar.png" RenderOptions.BitmapScalingMode="HighQuality" />
 
                                     <StackPanel Grid.Column="1" Margin="24" VerticalAlignment="Center">
-                                        <ui:TextBlock Margin="0" FontTypography="BodyStrong" Text="Downloads" TextWrapping="WrapWithOverflow" />
-                                        <ui:TextBlock Appearance="Secondary" Foreground="{DynamicResource TextFillColorSecondaryBrush}" Text="Download web browsers/apps with ease" TextWrapping="WrapWithOverflow" />
+                                        <ui:TextBlock Margin="0" FontTypography="BodyStrong" Text="下载" TextWrapping="WrapWithOverflow" />
+                                        <ui:TextBlock Appearance="Secondary" Foreground="{DynamicResource TextFillColorSecondaryBrush}" Text="轻松下载浏览器与常用应用" TextWrapping="WrapWithOverflow" />
                                     </StackPanel>
                                 </Grid>
                             </ui:CardAction>
@@ -153,8 +153,8 @@
                                     <Image Width="60" Margin="15,0,0,0" Source="pack://application:,,,/Assets/Updates.png" RenderOptions.BitmapScalingMode="HighQuality" />
 
                                     <StackPanel Grid.Column="1" Margin="10,24,24,24" VerticalAlignment="Center">
-                                        <ui:TextBlock Margin="0" FontTypography="BodyStrong" Text="Updates" TextWrapping="WrapWithOverflow" />
-                                        <ui:TextBlock Appearance="Secondary" Foreground="{DynamicResource TextFillColorSecondaryBrush}" Text="Download Windows Updates without the unnecessary bloat." TextWrapping="WrapWithOverflow" />
+                                        <ui:TextBlock Margin="0" FontTypography="BodyStrong" Text="更新" TextWrapping="WrapWithOverflow" />
+                                        <ui:TextBlock Appearance="Secondary" Foreground="{DynamicResource TextFillColorSecondaryBrush}" Text="下载 Windows 更新，告别多余组件。" TextWrapping="WrapWithOverflow" />
                                     </StackPanel>
                                 </Grid>
                             </ui:CardAction>

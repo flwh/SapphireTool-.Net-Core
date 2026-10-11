@@ -16,10 +16,10 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <ui:TextBlock FontTypography="Title" Text="About" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" Margin="30" />
+        <ui:TextBlock FontTypography="Title" Text="关于" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" Margin="30" />
 
         <ui:TextBlock Grid.Row="2" FontTypography="Body" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" FontSize="14" Margin="35,10,10,0" 
-                      Text="Thank you for using SapphireOS! I genuinely appreciate your support and trust. Your feedback inspires me to continue improving and delivering the best possible experience. This project wouldn't be possible without the incredible community of users like you. I love you all" TextWrapping="WrapWithOverflow" />
+                      Text="感谢你使用 SapphireOS！我由衷感谢你的支持与信任。你的反馈激励我不断改进、提供尽可能好的体验。没有像你们这样出色的社区用户，这个项目不可能实现。爱你们！" TextWrapping="WrapWithOverflow" />
 
         <Border Grid.Row="1" Padding="16" Margin="30,-10,20,5" Background="{ui:ThemeResource CardBackgroundFillColorDefaultBrush}" BorderBrush="{ui:ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1" Height="80" CornerRadius="8">
             <Grid>
@@ -41,9 +41,9 @@
         <StackPanel Grid.Row="3">
 
             <StackPanel Margin="35,20,0,0">
-                <ui:TextBlock FontTypography="Subtitle" Text="Support" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                <ui:TextBlock FontTypography="Subtitle" Text="支持" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
                 <StackPanel Orientation="Horizontal">
-                    <ui:TextBlock FontTypography="Body" VerticalAlignment="Center" FontSize="14" Text="Discord: " Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                    <ui:TextBlock FontTypography="Body" VerticalAlignment="Center" FontSize="14" Text="Discord：" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                     <ui:HyperlinkButton Content="@Hickensa" NavigateUri="https://discord.com/users/834636232973352960" Padding="5"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
@@ -54,13 +54,13 @@
             </StackPanel>
 
             <StackPanel Grid.Column="1" Margin="35,20,0,0">
-                <ui:TextBlock FontTypography="Subtitle" Text="Socials" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                <ui:TextBlock FontTypography="Subtitle" Text="社交媒体" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
                 <StackPanel Orientation="Horizontal">
 
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <iconPack:PackIconSimpleIcons Kind="Discord" VerticalAlignment="Center" Foreground="{DynamicResource TextFillColorPrimaryBrush}" />
-                    <ui:HyperlinkButton Content="Discord Server" NavigateUri="https://discord.gg/4aNYHSEHYw" Padding="5" Margin="5,0,0,0" />
+                    <ui:HyperlinkButton Content="Discord 服务器" NavigateUri="https://discord.gg/4aNYHSEHYw" Padding="5" Margin="5,0,0,0" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                 </StackPanel>

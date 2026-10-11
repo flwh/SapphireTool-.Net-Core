@@ -7,7 +7,7 @@
       <RowDefinition Height="Auto" />
       <RowDefinition Height="*" />
     </Grid.RowDefinitions>
-    <ui:TextBlock FontTypography="Title" Text="Updates" Margin="30" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+    <ui:TextBlock FontTypography="Title" Text="更新" Margin="30" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
     <Grid Row="1">
       <Grid.RowDefinitions>
         <RowDefinition Height="60" />
@@ -20,13 +20,13 @@
         </Grid.ColumnDefinitions>
         <StackPanel Margin="35,0,0,0">
           <ui:TextBlock Name="txtBlockCurrentWinver" FontTypography="Body" FontSize="14" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-          <ui:TextBlock Name="txtBlockLatestWinver" Text="Latest Winver: Unknown" FontTypography="Body" FontSize="14" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+          <ui:TextBlock Name="txtBlockLatestWinver" Text="最新版本：未知" FontTypography="Body" FontSize="14" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
         </StackPanel>
-        <ui:Button Name="btnCheckForUpdates" Grid.Column="1" Content="Check for Updates" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,25,0" Visibility="Visible" Click="btnCheckForUpdates_Click" />
-        <ui:Button Name="btnDownloadUpdates" Grid.Column="1" Content="Download &amp; Install Update" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,25,0" Visibility="Collapsed" Click="btnDownloadUpdates_Click" />
-        <ui:Button Name="btnCancel" Grid.Column="1" Content="Cancel Update" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,25,0" Visibility="Collapsed" Click="btnCancel_Click" />
+        <ui:Button Name="btnCheckForUpdates" Grid.Column="1" Content="检查更新" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,25,0" Visibility="Visible" Click="btnCheckForUpdates_Click" />
+        <ui:Button Name="btnDownloadUpdates" Grid.Column="1" Content="下载并安装更新" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,25,0" Visibility="Collapsed" Click="btnDownloadUpdates_Click" />
+        <ui:Button Name="btnCancel" Grid.Column="1" Content="取消更新" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,25,0" Visibility="Collapsed" Click="btnCancel_Click" />
       </Grid>
-      <ui:TextBlock Name="txtBlockUltralite" Grid.Row="1" FontTypography="Subtitle" Text="This option is not available for UltraLite Edition!" Visibility="Collapsed" FontSize="14" Margin="35,0,10,0" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+      <ui:TextBlock Name="txtBlockUltralite" Grid.Row="1" FontTypography="Subtitle" Text="此选项在 UltraLite 版中不可用！" Visibility="Collapsed" FontSize="14" Margin="35,0,10,0" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
       <UniformGrid Name="containerGrid" Visibility="Collapsed" Grid.Row="1" Columns="1" Rows="4" Margin="20,0,10,0">
         <Border Grid.Row="1" Padding="16" Margin="10,0,10,5" BorderThickness="1" Height="80" CornerRadius="8" Background="{ui:ThemeResource CardBackgroundFillColorDefaultBrush}" BorderBrush="{ui:ThemeResource CardStrokeColorDefaultBrush}">
           <Grid>
@@ -37,10 +37,10 @@
             </Grid.ColumnDefinitions>
             <ui:SymbolIcon Symbol="AppFolder48" FontSize="35" VerticalAlignment="Center" Margin="0,0,5,0" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
             <StackPanel Grid.Column="1" Margin="5,5,5,5">
-              <ui:TextBlock FontTypography="BodyStrong" Text="Cleanup leftovers &amp; temporary files after update" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-              <ui:TextBlock FontTypography="Caption" Text="Cleanup leftover temporary files generated while installing updates." Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+              <ui:TextBlock FontTypography="BodyStrong" Text="更新后清理残留文件与临时文件" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+              <ui:TextBlock FontTypography="Caption" Text="清理安装更新时产生的临时文件。" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
             </StackPanel>
-            <ui:ToggleSwitch Name="tsWinSxSCleanup" Grid.Column="2" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10" />
+            <ui:ToggleSwitch Name="tsWinSxSCleanup" Grid.Column="2" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10" />
           </Grid>
         </Border>
                 <Border Grid.Row="1" Padding="16" Margin="10,0,10,5" BorderThickness="1" Height="80" CornerRadius="8" Background="{ui:ThemeResource CardBackgroundFillColorDefaultBrush}" BorderBrush="{ui:ThemeResource CardStrokeColorDefaultBrush}">
@@ -52,10 +52,10 @@
                         </Grid.ColumnDefinitions>
                         <iconpacks:PackIconSimpleIcons xmlns:iconpacks="clr-namespace:MahApps.Metro.IconPacks;assembly=MahApps.Metro.IconPacks.SimpleIcons" iconpacks:PackIconSimpleIcons.Kind="MicrosoftEdge" FrameworkElement.Height="30" FrameworkElement.Width="30" FrameworkElement.VerticalAlignment="Center" Control.Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
                         <StackPanel Grid.Column="1" Margin="15,5,5,5">
-                            <ui:TextBlock FontTypography="BodyStrong" Text="Remove Microsoft Edge" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                            <ui:TextBlock FontTypography="Caption" Text="Prevent Microsoft Edge from reinstalling itself during Windows Update." Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                            <ui:TextBlock FontTypography="BodyStrong" Text="移除 Microsoft Edge" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                            <ui:TextBlock FontTypography="Caption" Text="防止 Microsoft Edge 在 Windows 更新期间自动重装。" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                         </StackPanel>
-                        <ui:ToggleSwitch Name="tsRemoveEdge" Grid.Column="2" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10" />
+                        <ui:ToggleSwitch Name="tsRemoveEdge" Grid.Column="2" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10" />
                     </Grid>
                 </Border>
                 <Border Grid.Row="1" Padding="16" Margin="10,0,10,5" BorderThickness="1" Height="80" CornerRadius="8" Background="{ui:ThemeResource CardBackgroundFillColorDefaultBrush}" BorderBrush="{ui:ThemeResource CardStrokeColorDefaultBrush}">
@@ -67,10 +67,10 @@
             </Grid.ColumnDefinitions>
             <ui:SymbolIcon Symbol="shield24" Filled="True" FontSize="30" VerticalAlignment="Center" Margin="0,0,10,0" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
             <StackPanel Grid.Column="1" Margin="5">
-              <ui:TextBlock FontTypography="BodyStrong" Text="Remove Windows Defender" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-              <ui:TextBlock FontTypography="Caption" Text="Prevent Windows Defender from reinstalling itself during Windows Update." Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+              <ui:TextBlock FontTypography="BodyStrong" Text="移除 Windows Defender" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+              <ui:TextBlock FontTypography="Caption" Text="防止 Windows Defender 在 Windows 更新期间自动重装。" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
             </StackPanel>
-            <ui:ToggleSwitch Name="tsRemoveDefender" Grid.Column="2" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10" />
+            <ui:ToggleSwitch Name="tsRemoveDefender" Grid.Column="2" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10" />
           </Grid>
         </Border>
       </UniformGrid>

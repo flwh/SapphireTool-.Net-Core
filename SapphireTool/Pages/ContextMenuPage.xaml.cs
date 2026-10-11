@@ -39,7 +39,7 @@ namespace SapphireTool.Pages
                 RegistryKey key = Registry.ClassesRoot.CreateSubKey(@"Directory\background\shell\reboot to fw");
                 if (key != null)
                 {
-                    key.SetValue("MUIVerb", "Reboot To BIOS");
+                    key.SetValue("MUIVerb", "重启进入 BIOS");
 
                     RegistryKey commandKey = key.CreateSubKey("command");
                     if (commandKey != null)
@@ -79,7 +79,7 @@ namespace SapphireTool.Pages
                 RegistryKey val = Registry.ClassesRoot.CreateSubKey("Directory\\Shell\\OpenElevatedCMD");
                 if (val != null)
                 {
-                    val.SetValue("", (object)"Open CMD As Administrator");
+                    val.SetValue("", (object)"以管理员身份打开 CMD");
                     val.SetValue("Icon", (object)"imageres.dll,-5324");
                     RegistryKey val2 = val.CreateSubKey("Command");
                     val2.SetValue("", (object)("Powershell.exe -windowstyle hidden -Command \"Start-Process cmd.exe -ArgumentList ‘/s,/k,pushd,%V’ -Verb RunAs\""));
@@ -90,7 +90,7 @@ namespace SapphireTool.Pages
                 RegistryKey val1 = Registry.ClassesRoot.CreateSubKey("Drive\\Shell\\OpenElevatedCMD");
                 if (val1 != null)
                 {
-                    val1.SetValue("", (object)"Open CMD As Administrator");
+                    val1.SetValue("", (object)"以管理员身份打开 CMD");
                     val1.SetValue("Icon", (object)"imageres.dll,-5324");
                     RegistryKey val2 = val1.CreateSubKey("Command");
                     val2.SetValue("", (object)("Powershell.exe -windowstyle hidden -Command \"Start-Process cmd.exe -ArgumentList ‘/s,/k,pushd,%V’ -Verb RunAs\""));
@@ -101,7 +101,7 @@ namespace SapphireTool.Pages
                 RegistryKey val3 = Registry.ClassesRoot.CreateSubKey("LibraryFolder\\background\\Shell\\OpenElevatedCMD");
                 if (val3 != null)
                 {
-                    val3.SetValue("", (object)"Open CMD As Administrator");
+                    val3.SetValue("", (object)"以管理员身份打开 CMD");
                     val3.SetValue("Icon", (object)"imageres.dll,-5324");
                     RegistryKey val2 = val3.CreateSubKey("Command");
                     val2.SetValue("", (object)("Powershell.exe -windowstyle hidden -Command \"Start-Process cmd.exe -ArgumentList ‘/s,/k,pushd,%V’ -Verb RunAs\""));
@@ -112,7 +112,7 @@ namespace SapphireTool.Pages
                 RegistryKey val4 = Registry.ClassesRoot.CreateSubKey("Directory\\Background\\Shell\\OpenElevatedCMD");
                 if (val4 != null)
                 {
-                    val4.SetValue("", (object)"Open CMD As Administrator");
+                    val4.SetValue("", (object)"以管理员身份打开 CMD");
                     val4.SetValue("Icon", (object)"imageres.dll,-5324");
                     RegistryKey val2 = val4.CreateSubKey("Command");
                     val2.SetValue("", (object)("Powershell.exe -windowstyle hidden -Command \"Start-Process cmd.exe -ArgumentList ‘/s,/k,pushd,%V’ -Verb RunAs\""));
@@ -211,7 +211,7 @@ namespace SapphireTool.Pages
                 RegistryKey val = Registry.ClassesRoot.CreateSubKey(REG_KILL_PATH);
                 if (val != null)
                 {
-                    val.SetValue("MUIVerb", (object)"Kill not responding tasks");
+                    val.SetValue("MUIVerb", (object)"结束未响应任务");
                     val.SetValue("Icon", (object)"%SystemRoot%\\\\System32\\\\imageres.dll,-98");
                     val.SetValue("Position", (object)"Top");
                     RegistryKey val2 = val.CreateSubKey("Command");
@@ -251,7 +251,7 @@ namespace SapphireTool.Pages
                 RegistryKey val = Registry.ClassesRoot.CreateSubKey("*\\shell\\TakeOwnership");
                 if (val != null)
                 {
-                    val.SetValue("", (object)"Take Ownership", (RegistryValueKind)1);
+                    val.SetValue("", (object)"获取所有权", (RegistryValueKind)1);
                     val.SetValue("HasLUAShield", (object)"", (RegistryValueKind)1);
                     val.SetValue("NoWorkingDirectory", (object)"", (RegistryValueKind)1);
                     val.SetValue("NeverDefault", (object)"", (RegistryValueKind)1);
@@ -264,7 +264,7 @@ namespace SapphireTool.Pages
                 val = Registry.ClassesRoot.CreateSubKey("Directory\\shell\\TakeOwnership");
                 if (val != null)
                 {
-                    val.SetValue("", (object)"Take Ownership", (RegistryValueKind)1);
+                    val.SetValue("", (object)"获取所有权", (RegistryValueKind)1);
                     val.SetValue("HasLUAShield", (object)"", (RegistryValueKind)1);
                     val.SetValue("NoWorkingDirectory", (object)"", (RegistryValueKind)1);
                     val.SetValue("NeverDefault", (object)"", (RegistryValueKind)1);
@@ -314,7 +314,7 @@ namespace SapphireTool.Pages
                 RegistryKey val = Registry.ClassesRoot.CreateSubKey("Directory\\Shell\\OpenElevatedPS");
                 if (val != null)
                 {
-                    val.SetValue("", (object)"Open Powershell As Administrator");
+                    val.SetValue("", (object)"以管理员身份打开 PowerShell");
                     val.SetValue("Icon", (object)"powershell.exe");
                     RegistryKey val2 = val.CreateSubKey("Command");
                     val2.SetValue("", (object)("Powershell.exe -windowstyle hidden -Command \"Start-Process cmd.exe -ArgumentList '/s,/c,pushd %V && powershell' -Verb RunAs\""));
@@ -325,7 +325,7 @@ namespace SapphireTool.Pages
                 RegistryKey val1 = Registry.ClassesRoot.CreateSubKey("Drive\\Shell\\OpenElevatedPS");
                 if (val1 != null)
                 {
-                    val1.SetValue("", (object)"Open Powershell As Administrator");
+                    val1.SetValue("", (object)"以管理员身份打开 PowerShell");
                     val1.SetValue("Icon", (object)"powershell.exe"); ;
                     RegistryKey val2 = val1.CreateSubKey("Command");
                     val2.SetValue("", (object)("Powershell.exe -windowstyle hidden -Command \"Start-Process cmd.exe -ArgumentList '/s,/c,pushd %V && powershell' -Verb RunAs\""));
@@ -336,7 +336,7 @@ namespace SapphireTool.Pages
                 RegistryKey val3 = Registry.ClassesRoot.CreateSubKey("LibraryFolder\\background\\Shell\\OpenElevatedPS");
                 if (val3 != null)
                 {
-                    val3.SetValue("", (object)"Open Powershell As Administrator");
+                    val3.SetValue("", (object)"以管理员身份打开 PowerShell");
                     val3.SetValue("Icon", (object)"powershell.exe");
                     RegistryKey val2 = val3.CreateSubKey("Command");
                     val2.SetValue("", (object)("Powershell.exe -windowstyle hidden -Command \"Start-Process cmd.exe -ArgumentList '/s,/c,pushd %V && powershell' -Verb RunAs\""));
@@ -347,7 +347,7 @@ namespace SapphireTool.Pages
                 RegistryKey val4 = Registry.ClassesRoot.CreateSubKey("Directory\\Background\\Shell\\OpenElevatedPS");
                 if (val4 != null)
                 {
-                    val4.SetValue("", (object)"Open Powershell As Administrator");
+                    val4.SetValue("", (object)"以管理员身份打开 PowerShell");
                     val4.SetValue("Icon", (object)"powershell.exe");
                     RegistryKey val2 = val4.CreateSubKey("Command");
                     val2.SetValue("", (object)("Powershell.exe -windowstyle hidden -Command \"Start-Process cmd.exe -ArgumentList '/s,/c,pushd %V && powershell' -Verb RunAs\""));
@@ -386,7 +386,7 @@ namespace SapphireTool.Pages
                 RegistryKey key = Registry.ClassesRoot.CreateSubKey(@"exefile\shell\Priority");
                 if (key != null)
                 {
-                    key.SetValue("MUIVerb", "Run with priority");
+                    key.SetValue("MUIVerb", "以指定优先级运行");
                     key.SetValue("SubCommands", "");
 
                     RegistryKey priorityKey;
@@ -394,7 +394,7 @@ namespace SapphireTool.Pages
                     priorityKey = key.CreateSubKey(@"shell\001flyout");
                     if (priorityKey != null)
                     {
-                        priorityKey.SetValue("", "Realtime");
+                        priorityKey.SetValue("", "实时");
 
                         RegistryKey commandKey = priorityKey.CreateSubKey("command");
                         if (commandKey != null)
@@ -408,7 +408,7 @@ namespace SapphireTool.Pages
                     priorityKey = key.CreateSubKey(@"shell\002flyout");
                     if (priorityKey != null)
                     {
-                        priorityKey.SetValue("", "High");
+                        priorityKey.SetValue("", "高");
 
                         RegistryKey commandKey = priorityKey.CreateSubKey("command");
                         if (commandKey != null)
@@ -449,26 +449,26 @@ namespace SapphireTool.Pages
                 RegistryKey val = Registry.ClassesRoot.CreateSubKey("DesktopBackground\\shell\\ShutDown");
                 if (val != null)
                 {
-                    val.SetValue("MUIVerb", (object)"Shut Down");
+                    val.SetValue("MUIVerb", (object)"关机");
                     val.SetValue("Icon", (object)"shell32.dll,-28");
                     val.SetValue("Position", (object)"Bottom");
                     val.SetValue("SubCommands", (object)"");
                     RegistryKey val2 = val.CreateSubKey("shell\\001ShutdownInstantly");
-                    val2.SetValue("MUIVerb", (object)"Shut down instantly");
+                    val2.SetValue("MUIVerb", (object)"立即关机");
                     val2.SetValue("Icon", (object)"shell32.dll,-28");
                     RegistryKey val3 = val2.CreateSubKey("Command");
                     val3.SetValue("", (object)"shutdown -s -f -t 0");
                     val3.Close();
                     val2.Close();
                     val2 = val.CreateSubKey("shell\\002ShutdownWarning");
-                    val2.SetValue("MUIVerb", (object)"Shut down with warning");
+                    val2.SetValue("MUIVerb", (object)"延时关机");
                     val2.SetValue("Icon", (object)"shell32.dll,-28");
                     val3 = val2.CreateSubKey("Command");
                     val3.SetValue("", (object)"shutdown -s");
                     val3.Close();
                     val2.Close();
                     val2 = val.CreateSubKey("shell\\003RestartInstantly");
-                    val2.SetValue("MUIVerb", (object)"Restart instantly");
+                    val2.SetValue("MUIVerb", (object)"立即重启");
                     val2.SetValue("Icon", (object)"shell32.dll,-16739");
                     val2.SetValue("CommandFlags", (object)32, (RegistryValueKind)4);
                     val3 = val2.CreateSubKey("Command");
@@ -476,7 +476,7 @@ namespace SapphireTool.Pages
                     val3.Close();
                     val2.Close();
                     val2 = val.CreateSubKey("shell\\004RestartWarning");
-                    val2.SetValue("MUIVerb", (object)"Restart with warning");
+                    val2.SetValue("MUIVerb", (object)"延时重启");
                     val2.SetValue("Icon", (object)"shell32.dll,-16739");
                     val3 = val2.CreateSubKey("Command");
                     val3.SetValue("", (object)"shutdown -r");
@@ -558,7 +558,7 @@ namespace SapphireTool.Pages
                 RegistryKey key = Registry.ClassesRoot.CreateSubKey(@"Directory\background\shell\Change Res");
                 if (key != null)
                 {
-                    key.SetValue("MUIVerb", "Change Resolution");
+                    key.SetValue("MUIVerb", "更改分辨率");
 
                     RegistryKey commandKey = key.CreateSubKey("command");
                     if (commandKey != null)
@@ -598,7 +598,7 @@ namespace SapphireTool.Pages
                 RegistryKey val = Registry.ClassesRoot.CreateSubKey("*\\shell\\Hash");
                 if (val != null)
                 {
-                    val.SetValue("MUIVerb", (object)"Hash");
+                    val.SetValue("MUIVerb", (object)"哈希校验");
                     val.SetValue("SubCommands", (object)"");
                     RegistryKey val2 = val.CreateSubKey("shell\\01Menu");
                     val2.SetValue("MUIVerb", (object)"SHA1");
@@ -643,7 +643,7 @@ namespace SapphireTool.Pages
                     val3.Close();
                     val2.Close();
                     val2 = val.CreateSubKey("shell\\08Menu");
-                    val2.SetValue("MUIVerb", (object)"Show all");
+                    val2.SetValue("MUIVerb", (object)"显示全部");
                     Registry.SetValue("HKEY_CLASSES_ROOT\\*\\shell\\hash\\shell\\08menu", "CommandFlags", 00000032, RegistryValueKind.DWord);
                     val3 = val2.CreateSubKey("Command");
                     val3.SetValue("", (object)"powershell -noexit get-filehash -literalpath '%1' -algorithm SHA1 | format-list;get-filehash -literalpath '%1' -algorithm SHA256 | format-list;get-filehash -literalpath '%1' -algorithm SHA384 | format-list;get-filehash -literalpath '%1' -algorithm SHA512 | format-list;get-filehash -literalpath '%1' -algorithm MACTripleDES | format-list;get-filehash -literalpath '%1' -algorithm MD5 | format-list;get-filehash -literalpath '%1' -algorithm RIPEMD160 | format-list");
@@ -683,7 +683,7 @@ namespace SapphireTool.Pages
                 RegistryKey val = Registry.ClassesRoot.CreateSubKey(REG_BASE_PATH);
                 if (val != null)
                 {
-                    val.SetValue("MUIVerb", (object)"Windows Tools");
+                    val.SetValue("MUIVerb", (object)"Windows 工具");
                     val.SetValue("Icon", (object)"imageres.dll,-114");
                     val.SetValue("Position", (object)"Bottom");
                     RegistryKey val2 = val.CreateSubKey("command");
