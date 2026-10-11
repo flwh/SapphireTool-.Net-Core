@@ -317,8 +317,8 @@
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0" Margin="5">
-                        <ui:TextBlock FontTypography="BodyStrong" Text="禁用壁纸降质压缩" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
-                        <ui:TextBlock FontTypography="Caption" Text="防止壁纸被压缩降质" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                        <ui:TextBlock FontTypography="BodyStrong" Text="禁用壁纸画质压缩" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="防止壁纸画质被压缩" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
                     </StackPanel>
                     <ui:ToggleSwitch x:Name="tsWallpaperQuality" Click="tsWallpaperQuality_Click" Grid.Column="1" VerticalAlignment="Top" OffContent="关" OnContent="开" Margin="10"/>
                 </Grid>
